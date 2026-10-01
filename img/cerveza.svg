@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 480">
+  <defs>
+    <radialGradient id="bg" cx="50%" cy="42%" r="70%">
+      <stop offset="0" stop-color="#6b4510"/><stop offset=".55" stop-color="#1e1407"/><stop offset="1" stop-color="#0a0806"/>
+    </radialGradient>
+    <linearGradient id="glass" x1="0" x2="1">
+      <stop offset="0" stop-color="#220f03"/><stop offset=".3" stop-color="#7c3f0b"/><stop offset=".55" stop-color="#4c2406"/><stop offset="1" stop-color="#160801"/>
+    </linearGradient>
+    <linearGradient id="beer" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ffd866"/><stop offset=".6" stop-color="#f0a417"/><stop offset="1" stop-color="#c77406"/>
+    </linearGradient>
+    <linearGradient id="shine" x1="0" x2="1">
+      <stop offset="0" stop-color="#fff" stop-opacity="0"/><stop offset=".5" stop-color="#fff" stop-opacity=".6"/><stop offset="1" stop-color="#fff" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="gold" x1="0" x2="1">
+      <stop offset="0" stop-color="#9c6a17"/><stop offset=".5" stop-color="#f8e099"/><stop offset="1" stop-color="#9c6a17"/>
+    </linearGradient>
+    <filter id="blur"><feGaussianBlur stdDeviation="7"/></filter>
+    <filter id="glow"><feGaussianBlur stdDeviation="18"/></filter>
+  </defs>
+  <rect width="400" height="480" fill="url(#bg)"/>
+  <g filter="url(#blur)" fill="#f5c55c" opacity=".35">
+    <circle cx="55" cy="80" r="16"/><circle cx="345" cy="60" r="11"/><circle cx="370" cy="200" r="18"/><circle cx="30" cy="260" r="10"/><circle cx="300" cy="120" r="8"/><circle cx="95" cy="170" r="7"/>
+  </g>
+  <ellipse cx="230" cy="300" rx="120" ry="150" fill="#f0a417" opacity=".25" filter="url(#glow)"/>
+  <ellipse cx="205" cy="455" rx="160" ry="14" fill="#000" opacity=".65"/>
+  <!-- bottle -->
+  <rect x="146" y="56" width="44" height="18" rx="3" fill="url(#gold)"/>
+  <path d="M152,72 H184 V160 C184,190 214,198 214,238 V438 Q214,452 200,452 H136 Q122,452 122,438 V238 C122,198 152,190 152,160 Z" fill="url(#glass)"/>
+  <rect x="150" y="104" width="36" height="40" fill="url(#gold)"/>
+  <rect x="122" y="286" width="92" height="96" fill="#f4ead2"/>
+  <rect x="122" y="286" width="92" height="8" fill="url(#gold)"/>
+  <rect x="122" y="374" width="92" height="8" fill="url(#gold)"/>
+  <text x="168" y="322" text-anchor="middle" font-family="Georgia,serif" font-size="11" fill="#7a1424" letter-spacing="2">PREMIUM</text>
+  <text x="168" y="344" text-anchor="middle" font-family="Georgia,serif" font-weight="700" font-size="17" fill="#1a0f05">LAGER</text>
+  <text x="168" y="362" text-anchor="middle" font-family="Georgia,serif" font-size="8" fill="#7a5a2a" letter-spacing="1.5">CERVEZA</text>
+  <rect x="131" y="240" width="12" height="196" rx="6" fill="url(#shine)" opacity=".45"/>
+  <rect x="157" y="80" width="6" height="70" rx="3" fill="url(#shine)" opacity=".4"/>
+  <!-- pint -->
+  <path d="M234,256 H330 L319,452 H245 Z" fill="url(#beer)" opacity=".95"/>
+  <path d="M230,236 H334 L331,262 C318,270 300,258 284,266 C268,272 250,262 233,266 Z" fill="#fff8e6"/>
+  <circle cx="246" cy="236" r="12" fill="#fff8e6"/><circle cx="268" cy="230" r="15" fill="#fffaf0"/><circle cx="294" cy="232" r="14" fill="#fff8e6"/><circle cx="318" cy="236" r="12" fill="#fffaf0"/>
+  <path d="M230,226 H334 L319,452 H245 Z" fill="none" stroke="#fff" stroke-opacity=".35" stroke-width="2"/>
+  <g fill="#fff" opacity=".7">
+    <circle cx="260" cy="420" r="2"/><circle cx="270" cy="380" r="1.6"/><circle cx="262" cy="340" r="2.2"/><circle cx="300" cy="400" r="1.8"/><circle cx="305" cy="350" r="1.5"/><circle cx="290" cy="300" r="2"/><circle cx="312" cy="300" r="1.5"/><circle cx="275" cy="290" r="1.4"/>
+  </g>
+  <rect x="244" y="270" width="10" height="170" rx="5" fill="url(#shine)" opacity=".5"/>
+  <g fill="#fff" opacity=".55">
+    <ellipse cx="200" cy="260" rx="2" ry="3"/><ellipse cx="140" cy="410" rx="2" ry="3"/><ellipse cx="205" cy="400" rx="1.6" ry="2.4"/><ellipse cx="326" cy="320" rx="1.8" ry="2.8"/>
+  </g>
+</svg>

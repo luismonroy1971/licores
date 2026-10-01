@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 480">
+  <defs>
+    <radialGradient id="bg" cx="50%" cy="40%" r="75%">
+      <stop offset="0" stop-color="#5a4614"/><stop offset=".55" stop-color="#1a1408"/><stop offset="1" stop-color="#080705"/>
+    </radialGradient>
+    <linearGradient id="clear" x1="0" x2="1">
+      <stop offset="0" stop-color="#c9c2a8" stop-opacity=".35"/><stop offset=".35" stop-color="#fffbea" stop-opacity=".75"/><stop offset=".6" stop-color="#e6dcbc" stop-opacity=".5"/><stop offset="1" stop-color="#a99f80" stop-opacity=".35"/>
+    </linearGradient>
+    <linearGradient id="sour" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#f6eebb"/><stop offset="1" stop-color="#d8c76a"/>
+    </linearGradient>
+    <linearGradient id="gold" x1="0" x2="1">
+      <stop offset="0" stop-color="#9c6a17"/><stop offset=".5" stop-color="#f8e099"/><stop offset="1" stop-color="#9c6a17"/>
+    </linearGradient>
+    <filter id="blur"><feGaussianBlur stdDeviation="7"/></filter>
+    <filter id="glow"><feGaussianBlur stdDeviation="22"/></filter>
+  </defs>
+  <rect width="400" height="480" fill="url(#bg)"/>
+  <g filter="url(#blur)" fill="#f2c25a" opacity=".32">
+    <circle cx="50" cy="80" r="16"/><circle cx="350" cy="70" r="12"/><circle cx="372" cy="220" r="16"/><circle cx="26" cy="260" r="10"/>
+  </g>
+  <ellipse cx="190" cy="290" rx="140" ry="160" fill="#f2d27a" opacity=".2" filter="url(#glow)"/>
+  <ellipse cx="205" cy="455" rx="165" ry="14" fill="#000" opacity=".7"/>
+  <!-- bottle -->
+  <rect x="138" y="36" width="40" height="34" rx="3" fill="#7a1424"/>
+  <rect x="138" y="64" width="40" height="5" fill="url(#gold)"/>
+  <path d="M142,70 H174 V150 C174,182 210,188 210,226 V438 Q210,452 196,452 H120 Q106,452 106,438 V226 C106,188 142,182 142,150 Z" fill="url(#clear)" stroke="#fff" stroke-opacity=".6" stroke-width="2"/>
+  <rect x="106" y="270" width="104" height="124" fill="#f6eedc"/>
+  <rect x="106" y="270" width="104" height="20" fill="#c8102e"/>
+  <rect x="140" y="270" width="36" height="20" fill="#fff"/>
+  <text x="158" y="322" text-anchor="middle" font-family="Georgia,serif" font-weight="700" font-size="22" fill="#7a1424" letter-spacing="2">PISCO</text>
+  <text x="158" y="342" text-anchor="middle" font-family="Georgia,serif" font-style="italic" font-size="12" fill="#5a4a2a">Quebranta</text>
+  <line x1="126" y1="354" x2="190" y2="354" stroke="#c9a14a"/>
+  <text x="158" y="378" text-anchor="middle" font-family="Georgia,serif" font-size="8" fill="#5a4a2a" letter-spacing="1.5">HECHO EN PERÚ</text>
+  <rect x="116" y="212" width="10" height="222" rx="5" fill="#fff" opacity=".45"/>
+  <!-- pisco sour coupe -->
+  <path d="M242,300 H360 C358,346 336,364 301,366 C266,364 244,346 242,300 Z" fill="url(#sour)"/>
+  <path d="M242,300 H360 C360,312 358,318 356,322 H246 C244,318 242,312 242,300 Z" fill="#fffdf2"/>
+  <circle cx="290" cy="309" r="3" fill="#7a3a12"/><circle cx="306" cy="311" r="2.6" fill="#7a3a12"/><circle cx="322" cy="308" r="3" fill="#7a3a12"/>
+  <path d="M238,292 H364 C362,346 338,368 301,370 C264,368 240,346 238,292 Z" fill="none" stroke="#fff" stroke-opacity=".55" stroke-width="2"/>
+  <rect x="298" y="370" width="6" height="68" fill="#fff" fill-opacity=".4"/>
+  <ellipse cx="301" cy="444" rx="34" ry="7" fill="#fff" fill-opacity=".25" stroke="#fff" stroke-opacity=".5"/>
+  <!-- lime halves -->
+  <g transform="translate(66,432)"><circle r="24" fill="#5aa01a"/><circle r="20" fill="#d6f08a"/>
+    <g stroke="#9fd61a" stroke-width="2"><line x1="0" y1="-18" x2="0" y2="18"/><line x1="-18" y1="0" x2="18" y2="0"/><line x1="-13" y1="-13" x2="13" y2="13"/><line x1="13" y1="-13" x2="-13" y2="13"/></g></g>
+</svg>

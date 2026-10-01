@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 480">
+  <defs>
+    <radialGradient id="bg" cx="50%" cy="42%" r="75%">
+      <stop offset="0" stop-color="#3a1a4a"/><stop offset=".55" stop-color="#140a1a"/><stop offset="1" stop-color="#070508"/>
+    </radialGradient>
+    <linearGradient id="steel" x1="0" x2="1">
+      <stop offset="0" stop-color="#5a5f66"/><stop offset=".35" stop-color="#e8ecf0"/><stop offset=".6" stop-color="#a8aeb5"/><stop offset="1" stop-color="#4a4e54"/>
+    </linearGradient>
+    <linearGradient id="gold" x1="0" x2="1">
+      <stop offset="0" stop-color="#9c6a17"/><stop offset=".5" stop-color="#f8e099"/><stop offset="1" stop-color="#9c6a17"/>
+    </linearGradient>
+    <linearGradient id="green" x1="0" x2="1">
+      <stop offset="0" stop-color="#0c2a10"/><stop offset=".4" stop-color="#2f7a2a"/><stop offset="1" stop-color="#0a2010"/>
+    </linearGradient>
+    <linearGradient id="amber" x1="0" x2="1">
+      <stop offset="0" stop-color="#2e0f03"/><stop offset=".4" stop-color="#9a4a0e"/><stop offset="1" stop-color="#220a02"/>
+    </linearGradient>
+    <linearGradient id="can" x1="0" x2="1">
+      <stop offset="0" stop-color="#3a0a5a"/><stop offset=".35" stop-color="#c24dff"/><stop offset=".6" stop-color="#8a1ad0"/><stop offset="1" stop-color="#2a0640"/>
+    </linearGradient>
+    <filter id="blur"><feGaussianBlur stdDeviation="7"/></filter>
+    <filter id="glow"><feGaussianBlur stdDeviation="22"/></filter>
+  </defs>
+  <rect width="400" height="480" fill="url(#bg)"/>
+  <g filter="url(#blur)" opacity=".5">
+    <circle cx="50" cy="80" r="14" fill="#ff3ad8"/><circle cx="350" cy="70" r="16" fill="#3ad8ff"/><circle cx="370" cy="230" r="10" fill="#d8ff3a"/><circle cx="30" cy="250" r="14" fill="#f2c25a"/>
+  </g>
+  <ellipse cx="190" cy="300" rx="150" ry="150" fill="#b04dff" opacity=".22" filter="url(#glow)"/>
+  <ellipse cx="200" cy="455" rx="165" ry="14" fill="#000" opacity=".7"/>
+  <!-- bottles in bucket -->
+  <g transform="rotate(-10 140 300)">
+    <rect x="112" y="96" width="26" height="18" rx="3" fill="url(#gold)"/>
+    <path d="M114,114 H136 V180 C136,200 160,206 160,236 V340 H90 V236 C90,206 114,200 114,180 Z" fill="url(#green)"/>
+  </g>
+  <g transform="rotate(9 220 300)">
+    <rect x="206" y="80" width="28" height="22" rx="3" fill="#111"/>
+    <path d="M208,102 H232 V170 C232,192 260,198 260,230 V340 H180 V230 C180,198 208,192 208,170 Z" fill="url(#amber)"/>
+    <rect x="186" y="250" width="68" height="40" fill="#0d0d0d"/><rect x="186" y="250" width="68" height="4" fill="url(#gold)"/>
+  </g>
+  <!-- ice cubes peeking -->
+  <g fill="#e6f4ff" fill-opacity=".55" stroke="#fff" stroke-opacity=".8" stroke-width="1.4">
+    <rect x="88" y="280" width="34" height="34" rx="6" transform="rotate(-18 105 297)"/>
+    <rect x="148" y="286" width="34" height="34" rx="6" transform="rotate(14 165 303)"/>
+    <rect x="210" y="282" width="34" height="34" rx="6" transform="rotate(-10 227 299)"/>
+    <rect x="252" y="290" width="30" height="30" rx="6" transform="rotate(22 267 305)"/>
+  </g>
+  <!-- bucket -->
+  <path d="M70,306 H300 L284,446 Q283,452 276,452 H94 Q87,452 86,446 Z" fill="url(#steel)"/>
+  <rect x="66" y="300" width="238" height="14" rx="7" fill="url(#steel)"/>
+  <rect x="80" y="352" width="210" height="6" fill="#fff" opacity=".25"/>
+  <path d="M66,316 q-22,10 -10,30" stroke="url(#steel)" stroke-width="6" fill="none"/>
+  <path d="M304,316 q22,10 10,30" stroke="url(#steel)" stroke-width="6" fill="none"/>
+  <text x="185" y="408" text-anchor="middle" font-family="Georgia,serif" font-size="14" fill="#2a2e33" letter-spacing="4">ICE</text>
+  <!-- energy can -->
+  <g transform="translate(316,330)">
+    <ellipse cx="25" cy="2" rx="25" ry="6" fill="url(#steel)"/>
+    <path d="M0,4 H50 V112 Q50,120 42,120 H8 Q0,120 0,112 Z" fill="url(#can)"/>
+    <path d="M14,40 L30,40 L20,62 L34,62 L14,92 L20,68 L8,68 Z" fill="#d8ff3a"/>
+  </g>
+  <!-- loose ice -->
+  <g fill="#e6f4ff" fill-opacity=".4" stroke="#fff" stroke-opacity=".7" stroke-width="1.2">
+    <rect x="30" y="420" width="28" height="28" rx="5" transform="rotate(-12 44 434)"/>
+    <rect x="296" y="430" width="22" height="22" rx="4" transform="rotate(18 307 441)"/>
+  </g>
+</svg>

@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 480">
+  <defs>
+    <radialGradient id="bg" cx="50%" cy="40%" r="75%">
+      <stop offset="0" stop-color="#5a0f1c"/><stop offset=".55" stop-color="#1e070b"/><stop offset="1" stop-color="#090405"/>
+    </radialGradient>
+    <linearGradient id="glass" x1="0" x2="1">
+      <stop offset="0" stop-color="#0a0405"/><stop offset=".35" stop-color="#3a0d16"/><stop offset=".6" stop-color="#1c060a"/><stop offset="1" stop-color="#060203"/>
+    </linearGradient>
+    <linearGradient id="wine" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#9c1830"/><stop offset="1" stop-color="#3e0610"/>
+    </linearGradient>
+    <linearGradient id="gold" x1="0" x2="1">
+      <stop offset="0" stop-color="#9c6a17"/><stop offset=".5" stop-color="#f8e099"/><stop offset="1" stop-color="#9c6a17"/>
+    </linearGradient>
+    <linearGradient id="shine" x1="0" x2="1">
+      <stop offset="0" stop-color="#fff" stop-opacity="0"/><stop offset=".5" stop-color="#fff" stop-opacity=".55"/><stop offset="1" stop-color="#fff" stop-opacity="0"/>
+    </linearGradient>
+    <radialGradient id="grape" cx="35%" cy="35%" r="70%">
+      <stop offset="0" stop-color="#9a4a6a"/><stop offset="1" stop-color="#2a0a1a"/>
+    </radialGradient>
+    <filter id="blur"><feGaussianBlur stdDeviation="7"/></filter>
+    <filter id="glow"><feGaussianBlur stdDeviation="22"/></filter>
+  </defs>
+  <rect width="400" height="480" fill="url(#bg)"/>
+  <g filter="url(#blur)" fill="#f0c36a" opacity=".3">
+    <circle cx="60" cy="70" r="16"/><circle cx="340" cy="80" r="12"/><circle cx="370" cy="210" r="16"/><circle cx="30" cy="250" r="10"/>
+  </g>
+  <ellipse cx="200" cy="290" rx="140" ry="160" fill="#b01c38" opacity=".25" filter="url(#glow)"/>
+  <ellipse cx="205" cy="455" rx="165" ry="14" fill="#000" opacity=".7"/>
+  <!-- bottle -->
+  <path d="M148,40 H182 V120 H148 Z" fill="#5a0f1c"/>
+  <rect x="148" y="112" width="34" height="5" fill="url(#gold)"/>
+  <path d="M150,118 H180 V176 C180,206 214,210 214,246 V438 Q214,452 200,452 H130 Q116,452 116,438 V246 C116,210 150,206 150,176 Z" fill="url(#glass)"/>
+  <rect x="116" y="282" width="98" height="120" fill="#f6eedc"/>
+  <rect x="121" y="287" width="88" height="110" fill="none" stroke="url(#gold)" stroke-width="1.5"/>
+  <text x="165" y="312" text-anchor="middle" font-family="Georgia,serif" font-size="9" fill="#7a1424" letter-spacing="2.5">RESERVA</text>
+  <text x="165" y="342" text-anchor="middle" font-family="Georgia,serif" font-style="italic" font-size="22" fill="#7a1424">Tinto</text>
+  <line x1="138" y1="352" x2="192" y2="352" stroke="#c9a14a" stroke-width=".8"/>
+  <rect x="116" y="370" width="98" height="20" fill="#7a1424"/>
+  <text x="165" y="384" text-anchor="middle" font-family="Georgia,serif" font-size="8" fill="#f6eedc" letter-spacing="1.5">750 ML</text>
+  <rect x="124" y="226" width="11" height="210" rx="5.5" fill="url(#shine)" opacity=".4"/>
+  <!-- wine glass -->
+  <path d="M262,218 H352 C356,286 340,330 307,334 C274,330 258,286 262,218 Z" fill="#fff" fill-opacity=".06" stroke="#fff" stroke-opacity=".5" stroke-width="2"/>
+  <path d="M263,272 H351 C346,310 332,330 307,332 C282,330 268,310 263,272 Z" fill="url(#wine)"/>
+  <ellipse cx="307" cy="272" rx="44" ry="5" fill="#c4304e" opacity=".8"/>
+  <rect x="304" y="334" width="6" height="104" fill="#fff" fill-opacity=".35"/>
+  <ellipse cx="307" cy="444" rx="36" ry="7" fill="#fff" fill-opacity=".25" stroke="#fff" stroke-opacity=".5"/>
+  <path d="M272,232 C270,262 276,296 290,316" fill="none" stroke="#fff" stroke-opacity=".5" stroke-width="3" stroke-linecap="round"/>
+  <!-- grapes -->
+  <g>
+    <path d="M60,388 q6,-18 22,-22" stroke="#4a6a2a" stroke-width="3" fill="none"/>
+    <circle cx="70" cy="400" r="13" fill="url(#grape)"/><circle cx="94" cy="402" r="13" fill="url(#grape)"/><circle cx="58" cy="422" r="13" fill="url(#grape)"/><circle cx="82" cy="424" r="13" fill="url(#grape)"/><circle cx="106" cy="426" r="13" fill="url(#grape)"/><circle cx="70" cy="444" r="12" fill="url(#grape)"/><circle cx="94" cy="446" r="12" fill="url(#grape)"/>
+  </g>
+</svg>

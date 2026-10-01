@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 480">
+  <defs>
+    <radialGradient id="bg" cx="50%" cy="38%" r="75%">
+      <stop offset="0" stop-color="#14324a"/><stop offset=".5" stop-color="#0c1520"/><stop offset="1" stop-color="#060708"/>
+    </radialGradient>
+    <linearGradient id="liq" x1="0" x2="1">
+      <stop offset="0" stop-color="#2e0f03"/><stop offset=".35" stop-color="#9a4a0e"/><stop offset=".6" stop-color="#6a2c07"/><stop offset="1" stop-color="#220a02"/>
+    </linearGradient>
+    <linearGradient id="cola" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#7a3510"/><stop offset="1" stop-color="#2a0e04"/>
+    </linearGradient>
+    <linearGradient id="gold" x1="0" x2="1">
+      <stop offset="0" stop-color="#9c6a17"/><stop offset=".5" stop-color="#f8e099"/><stop offset="1" stop-color="#9c6a17"/>
+    </linearGradient>
+    <linearGradient id="shine" x1="0" x2="1">
+      <stop offset="0" stop-color="#fff" stop-opacity="0"/><stop offset=".5" stop-color="#fff" stop-opacity=".6"/><stop offset="1" stop-color="#fff" stop-opacity="0"/>
+    </linearGradient>
+    <filter id="blur"><feGaussianBlur stdDeviation="6"/></filter>
+    <filter id="glow"><feGaussianBlur stdDeviation="20"/></filter>
+  </defs>
+  <rect width="400" height="480" fill="url(#bg)"/>
+  <g filter="url(#blur)" opacity=".45">
+    <rect x="20" y="60" width="10" height="40" fill="#3aa0ff"/><rect x="50" y="80" width="10" height="34" fill="#f2c25a"/><rect x="330" y="50" width="10" height="44" fill="#3aa0ff"/><rect x="360" y="70" width="10" height="36" fill="#f2c25a"/><rect x="300" y="160" width="8" height="30" fill="#3aa0ff"/><rect x="40" y="190" width="8" height="30" fill="#3aa0ff"/>
+  </g>
+  <ellipse cx="180" cy="290" rx="130" ry="160" fill="#d48a1e" opacity=".22" filter="url(#glow)"/>
+  <ellipse cx="205" cy="455" rx="165" ry="14" fill="#000" opacity=".7"/>
+  <!-- bottle -->
+  <rect x="146" y="40" width="40" height="26" rx="3" fill="#111"/>
+  <rect x="146" y="60" width="40" height="5" fill="url(#gold)"/>
+  <path d="M150,66 H182 V140 C182,172 226,176 226,222 V438 Q226,452 212,452 H120 Q106,452 106,438 V222 C106,176 150,172 150,140 Z" fill="url(#liq)"/>
+  <rect x="106" y="262" width="120" height="128" fill="#0d0d0d"/>
+  <rect x="106" y="262" width="120" height="6" fill="url(#gold)"/>
+  <rect x="106" y="384" width="120" height="6" fill="url(#gold)"/>
+  <text x="166" y="292" text-anchor="middle" font-family="Georgia,serif" font-size="11" fill="#e8c77a" letter-spacing="3">RON</text>
+  <rect x="116" y="298" width="100" height="26" fill="#f4ead2"/>
+  <text x="166" y="318" text-anchor="middle" font-family="Impact,Arial Black,sans-serif" font-size="19" fill="#111" letter-spacing="1">AÑEJO</text>
+  <!-- ship glyph -->
+  <path d="M146,358 L186,358 L180,368 H152 Z" fill="url(#gold)"/>
+  <path d="M152,354 L164,330 L164,354 Z M168,354 L168,326 L182,354 Z" fill="#f4ead2"/>
+  <rect x="116" y="200" width="12" height="236" rx="6" fill="url(#shine)" opacity=".45"/>
+  <!-- highball -->
+  <path d="M256,282 H340 L334,450 H262 Z" fill="url(#cola)" opacity=".95"/>
+  <g fill="#fff" fill-opacity=".22" stroke="#fff" stroke-opacity=".5">
+    <rect x="266" y="296" width="30" height="30" rx="5" transform="rotate(-12 281 311)"/>
+    <rect x="298" y="306" width="30" height="30" rx="5" transform="rotate(16 313 321)"/>
+    <rect x="274" y="346" width="28" height="28" rx="5" transform="rotate(20 288 360)"/>
+    <rect x="304" y="370" width="26" height="26" rx="5" transform="rotate(-8 317 383)"/>
+  </g>
+  <path d="M252,262 H344 L334,450 H262 Z" fill="none" stroke="#fff" stroke-opacity=".45" stroke-width="2"/>
+  <line x1="318" y1="200" x2="300" y2="420" stroke="#111" stroke-width="5" stroke-linecap="round"/>
+  <circle cx="262" cy="272" r="28" fill="#cfe86a"/>
+  <circle cx="262" cy="272" r="23" fill="#e9f7a8"/>
+  <g stroke="#cfe86a" stroke-width="2"><line x1="262" y1="250" x2="262" y2="294"/><line x1="240" y1="272" x2="284" y2="272"/><line x1="246" y1="256" x2="278" y2="288"/><line x1="278" y1="256" x2="246" y2="288"/></g>
+  <g fill="#fff" opacity=".6"><circle cx="280" cy="420" r="1.8"/><circle cx="320" cy="430" r="1.5"/><circle cx="290" cy="400" r="1.4"/></g>
+</svg>
