@@ -3,12 +3,14 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Licores San Miguel · Delivery de licores en Comas</title>
+<title>Licores El Chalo · Delivery de licores en Comas</title>
 <meta name="description" content="Delivery de licores en Comas y Lima Norte: vinos, espumantes, rones, vodkas, whiskys, cervezas, Mike's y más. Pide por WhatsApp al +51 977 829 907.">
 <meta name="theme-color" content="#0b0907">
-<meta property="og:title" content="Licores San Miguel · Delivery de licores">
+<link rel="icon" type="image/png" href="img/favicon.png">
+<link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+<meta property="og:title" content="Licores El Chalo · Delivery de licores">
 <meta property="og:description" content="Tus licores favoritos, bien helados, en la puerta de tu casa. Pide por WhatsApp.">
-<meta property="og:image" content="img/espumante-noche-de-paz.jpg">
+<meta property="og:image" content="img/logo-web.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Great+Vibes&family=Montserrat:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600;1,700&display=swap" rel="stylesheet">
@@ -16,7 +18,7 @@
 :root{
   --black:#0b0907; --ink:#14100b; --card:#18130d; --line:rgba(212,162,76,.22);
   --gold:#d4a24c; --gold-2:#f3d98b; --gold-3:#9c6a17;
-  --wine:#7a1424; --wine-2:#a31d35;
+  --wine:#7a1424; --wine-2:#c41a1f; --red:#e3241b;
   --cream:#f5ecd9; --muted:#b9ab90;
   --wa:#25d366; --wa-2:#128c7e;
   --neon:#d8ff3a; --ice:#5ab8ff;
@@ -64,9 +66,28 @@ button{font:inherit;cursor:pointer;border:0;background:none;color:inherit}
 /* Nav */
 header.nav{position:sticky;top:0;z-index:50;background:rgba(11,9,7,.78);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
 .nav .wrap{display:flex;align-items:center;justify-content:space-between;height:76px;gap:20px}
-.logo{display:flex;flex-direction:column;line-height:1}
-.logo small{font-family:"Playfair Display",serif;font-size:.85rem;letter-spacing:.3em;text-transform:uppercase;color:var(--cream);opacity:.85;padding-left:4px}
-.logo b{font-family:"Great Vibes",cursive;font-weight:400;font-size:2.1rem;margin-top:4px;padding:0 4px}
+.logo{display:flex;align-items:center;gap:12px;line-height:1}
+.logo img{width:58px;height:58px;object-fit:contain;flex:none;filter:drop-shadow(0 0 12px rgba(227,36,27,.35)) drop-shadow(0 6px 10px rgba(0,0,0,.7));transition:transform .5s cubic-bezier(.2,.8,.2,1)}
+.logo:hover img{transform:rotate(-8deg) scale(1.06)}
+.logo .wm{display:flex;flex-direction:column;gap:3px}
+.logo .wm small{font-size:.62rem;font-weight:700;letter-spacing:.34em;text-transform:uppercase;color:var(--cream);opacity:.75}
+.logo .wm b{font-family:"Playfair Display",serif;font-style:italic;font-weight:800;font-size:1.65rem;letter-spacing:-.01em}
+.logo-stack{flex-direction:column;gap:14px;text-align:center}
+.logo.logo-stack img{width:170px;height:170px}
+.logo.logo-stack .wm b{font-size:2.2rem}
+.logo.logo-foot img{width:96px;height:96px}
+.logo.logo-foot .wm b{font-size:1.6rem}
+.brand-badge{position:relative;display:grid;place-items:center;border-radius:50%;isolation:isolate}
+.brand-badge::before{content:"";position:absolute;inset:-14%;z-index:-1;border-radius:50%;background:radial-gradient(circle,rgba(227,36,27,.45),rgba(212,162,76,.18) 45%,transparent 70%);filter:blur(6px);animation:pulseGlow 3.5s ease-in-out infinite}
+.brand-badge::after{content:"";position:absolute;inset:-6px;z-index:-1;border-radius:50%;border:1.5px solid rgba(243,217,139,.55);box-shadow:0 0 0 6px rgba(212,162,76,.08)}
+.brand-badge img{width:100%;height:100%;object-fit:contain;filter:drop-shadow(0 18px 30px rgba(0,0,0,.8))}
+@keyframes pulseGlow{50%{opacity:.6;transform:scale(1.06)}}
+.hero-badge{position:absolute;z-index:6;width:150px;height:150px;left:50%;bottom:-2%;transform:translateX(-50%);animation:bobC 4s ease-in-out infinite}
+.final-badge{width:170px;height:170px;margin:0 auto 26px}
+.loc-brand{display:flex;align-items:center;gap:16px}
+.loc-brand img{width:76px;height:76px;object-fit:contain;filter:drop-shadow(0 0 14px rgba(227,36,27,.35))}
+.dh-title{display:flex;align-items:center;gap:12px}
+.dh-title img{width:44px;height:44px;object-fit:contain}
 .nav ul{display:flex;gap:30px;list-style:none;font-weight:600;font-size:.88rem}
 .nav ul a{opacity:.8;transition:opacity .2s,color .2s}
 .nav ul a:hover{opacity:1;color:var(--gold-2)}
@@ -81,7 +102,7 @@ header.nav{position:sticky;top:0;z-index:50;background:rgba(11,9,7,.78);backdrop
 .hero{position:relative;min-height:calc(100vh - 110px);display:flex;align-items:center;padding:70px 0 90px;overflow:hidden;isolation:isolate}
 .hero::before{content:"";position:absolute;inset:0;z-index:-2;background:
   radial-gradient(60% 70% at 78% 45%,rgba(212,162,76,.22),transparent 60%),
-  radial-gradient(50% 60% at 10% 90%,rgba(122,20,36,.35),transparent 60%),
+  radial-gradient(50% 60% at 10% 90%,rgba(196,26,31,.32),transparent 60%),
   radial-gradient(40% 40% at 50% 0%,rgba(212,162,76,.08),transparent 70%),var(--black)}
 .hero-bigword{position:absolute;z-index:-1;left:50%;bottom:-3vw;transform:translateX(-50%);font-family:"Bebas Neue",sans-serif;font-size:clamp(7rem,24vw,22rem);line-height:.8;letter-spacing:.02em;color:transparent;-webkit-text-stroke:1.5px rgba(212,162,76,.16);white-space:nowrap;pointer-events:none;user-select:none}
 .sparks{position:absolute;inset:0;z-index:-1;pointer-events:none}
@@ -115,11 +136,12 @@ header.nav{position:sticky;top:0;z-index:50;background:rgba(11,9,7,.78);backdrop
 .float-card small{color:var(--muted);font-size:.75rem}
 .float-card .ic{width:42px;height:42px;border-radius:12px;display:grid;place-items:center;flex:none}
 .float-card .ic svg{width:24px;height:24px}
-.fc-1{left:-4%;bottom:6%}
+.fc-1{left:-4%;top:6%}
 .fc-1 .ic{background:var(--wa);color:#fff}
-.fc-2{right:-2%;top:2%;animation-delay:-2s}
+.fc-2{right:-2%;bottom:14%;animation-delay:-2s}
 .fc-2 .ic{background:var(--grad-gold);color:#1a1208}
 @keyframes bob{50%{transform:translateY(-10px)}}
+@keyframes bobC{0%,100%{transform:translateX(-50%)}50%{transform:translateX(-50%) translateY(-10px)}}
 
 /* Strip */
 .strip{background:#0f0c08;border-block:1px solid var(--line);overflow:hidden;white-space:nowrap}
@@ -303,8 +325,7 @@ footer{border-top:1px solid var(--line);padding:60px 0 120px;background:#080604}
 .gate{position:fixed;inset:0;z-index:200;display:grid;place-items:center;padding:16px;background:radial-gradient(60% 60% at 50% 40%,rgba(212,162,76,.18),transparent 70%),rgba(6,5,4,.96);backdrop-filter:blur(8px)}
 .gate[hidden]{display:none}
 .gate-box{max-width:460px;width:100%;text-align:center;padding:48px 34px;border-radius:26px;border:1px solid rgba(212,162,76,.5);background:#110d09;box-shadow:0 40px 100px -30px rgba(212,162,76,.4)}
-.gate-box .logo{align-items:center;margin-bottom:24px}
-.gate-box .logo b{font-size:2.8rem}
+.gate-box .logo{margin:-10px auto 22px;align-items:center}
 .gate-box h2{font-family:"Playfair Display",serif;font-size:1.7rem;margin-bottom:8px}
 .gate-box p{color:var(--muted);margin-bottom:28px;font-size:.95rem}
 .gate-box .cta{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
@@ -338,12 +359,16 @@ footer{border-top:1px solid var(--line);padding:60px 0 120px;background:#080604}
   .nav .wrap{height:66px}
   .nav .actions .btn span{display:none}
   .nav .actions .btn{padding:12px}
-  .logo b{font-size:1.8rem}
+  .logo img{width:48px;height:48px}
+  .logo .wm b{font-size:1.35rem}
+  .hero-badge{width:118px;height:118px}
+  .logo.logo-foot img{width:80px;height:80px}
+  .logo.logo-stack img{width:140px;height:140px}
   .hero{padding:44px 0 70px}
   .hero .cta .btn{flex:1}
   .collage{height:440px}
   .fc-2{display:none}
-  .fc-1{left:0;bottom:2%}
+  .fc-1{left:0;top:0}
   .steps,.pack-grid{grid-template-columns:1fr}
   .pack.hot{transform:none}
   .bento{grid-template-columns:1fr}
@@ -377,7 +402,7 @@ footer{border-top:1px solid var(--line);padding:60px 0 120px;background:#080604}
 <!-- Age gate -->
 <div class="gate" id="gate" hidden>
   <div class="gate-box">
-    <div class="logo"><small>Licores</small><b class="gold-text">San Miguel</b></div>
+    <div class="logo logo-stack"><img src="img/logo-web.png" alt="Distribuidor Licores El Chalo" width="170" height="170"><span class="wm"><small>Distribuidor de licores</small><b class="gold-text">El Chalo</b></span></div>
     <h2>¿Eres mayor de 18 años?</h2>
     <p>Para ingresar debes tener la edad legal para consumir bebidas alcohólicas en el Perú.</p>
     <div class="cta">
@@ -398,7 +423,7 @@ footer{border-top:1px solid var(--line);padding:60px 0 120px;background:#080604}
 
 <header class="nav">
   <div class="wrap">
-    <a href="#inicio" class="logo" aria-label="Licores San Miguel - inicio"><small>Licores</small><b class="gold-text">San Miguel</b></a>
+    <a href="#inicio" class="logo" aria-label="Licores El Chalo - inicio"><img src="img/logo-web.png" alt="" width="58" height="58"><span class="wm"><small>Licores</small><b class="gold-text">El Chalo</b></span></a>
     <ul>
       <li><a href="#como-pedir">Cómo pedir</a></li>
       <li><a href="#destacados">Destacados</a></li>
@@ -412,7 +437,7 @@ footer{border-top:1px solid var(--line);padding:60px 0 120px;background:#080604}
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 7h12l-1 13H7L6 7Z"/><path d="M9 7a3 3 0 0 1 6 0"/></svg>
         <span class="cart-count" id="cartCount">0</span>
       </button>
-      <a class="btn btn-wa btn-sm" data-wa="Hola Licores San Miguel 👋 Quiero hacer un pedido por delivery." target="_blank" rel="noopener">
+      <a class="btn btn-wa btn-sm" data-wa="Hola Licores El Chalo 👋 Quiero hacer un pedido por delivery." target="_blank" rel="noopener">
         <svg viewBox="0 0 32 32" fill="currentColor"><use href="#i-wa"/></svg><span>Pedir ahora</span>
       </a>
     </div>
@@ -433,7 +458,7 @@ footer{border-top:1px solid var(--line);padding:60px 0 120px;background:#080604}
       </h1>
       <p class="lead">Vinos, espumantes, rones, vodkas, whiskys, cervezas, Mike's y mucho más. Escríbenos por WhatsApp y en minutos tu pedido va en camino.</p>
       <div class="cta">
-        <a class="btn btn-wa" data-wa="Hola Licores San Miguel 👋 Quiero pedir delivery. ¿Qué tienen disponible hoy?" target="_blank" rel="noopener">
+        <a class="btn btn-wa" data-wa="Hola Licores El Chalo 👋 Quiero pedir delivery. ¿Qué tienen disponible hoy?" target="_blank" rel="noopener">
           <svg viewBox="0 0 32 32" fill="currentColor"><use href="#i-wa"/></svg> Pedir por WhatsApp
         </a>
         <a class="btn btn-ghost" href="#catalogo">Ver catálogo</a>
@@ -449,9 +474,10 @@ footer{border-top:1px solid var(--line);padding:60px 0 120px;background:#080604}
       <div class="ph ph-2"><img src="img/ron-bahamas.jpg" alt=""></div>
       <div class="ph ph-3"><img src="img/vodka-alaska.jpg" alt="" style="object-position:center 60%"></div>
       <div class="ph ph-1"><img src="img/espumante-noche-de-paz.jpg" alt=""></div>
+      <div class="brand-badge hero-badge"><img src="img/logo-web.png" alt=""></div>
       <div class="float-card fc-1">
         <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><use href="#i-moto"/></svg></span>
-        <span><b>¡Tu pedido va en camino!</b><small>Delivery Licores San Miguel</small></span>
+        <span><b>¡Tu pedido va en camino!</b><small>Delivery Licores El Chalo</small></span>
       </div>
       <div class="float-card fc-2">
         <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><use href="#i-star"/></svg></span>
@@ -497,7 +523,7 @@ footer{border-top:1px solid var(--line);padding:60px 0 120px;background:#080604}
       </div>
     </div>
     <div class="steps-cta reveal">
-      <a class="btn btn-wa" data-wa="Hola Licores San Miguel 👋 Quiero hacer un pedido por delivery." target="_blank" rel="noopener">
+      <a class="btn btn-wa" data-wa="Hola Licores El Chalo 👋 Quiero hacer un pedido por delivery." target="_blank" rel="noopener">
         <svg viewBox="0 0 32 32" fill="currentColor"><use href="#i-wa"/></svg> Empezar mi pedido
       </a>
     </div>
@@ -528,9 +554,9 @@ footer{border-top:1px solid var(--line);padding:60px 0 120px;background:#080604}
       <article class="feat f-2 reveal" data-product="Gran Vino Borgoña San Miguel">
         <img src="img/vino-borgona.jpg" alt="Gran Vino Borgoña San Miguel con copas de vino" loading="lazy">
         <div class="body">
-          <span class="tag wine">Marca de la casa</span>
+          <span class="tag wine">Clásico de la mesa</span>
           <h3>Gran Vino Borgoña San Miguel</h3>
-          <p>Nuestro clásico: aroma intenso, sabor suave y el sello de calidad San Miguel.</p>
+          <p>Aroma intenso y sabor suave: el vino que nunca falla en tus reuniones.</p>
           <div class="card-actions">
             <button class="add" data-add><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg>Agregar</button>
             <a class="btn btn-wa btn-sm" data-wa-product target="_blank" rel="noopener"><svg viewBox="0 0 32 32" fill="currentColor"><use href="#i-wa"/></svg>Pedir ya</a>
@@ -648,7 +674,7 @@ footer{border-top:1px solid var(--line);padding:60px 0 120px;background:#080604}
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5 9-10"/></svg>Bolsa de hielo</li>
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5 9-10"/></svg>Vasos descartables</li>
         </ul>
-        <a class="btn btn-ghost" data-wa="Hola Licores San Miguel 👋 Quiero el PACK PREVIA (ron o vodka + gaseosa 3L + hielo + vasos). ¿Precio y disponibilidad?" target="_blank" rel="noopener">Quiero este pack</a>
+        <a class="btn btn-ghost" data-wa="Hola Licores El Chalo 👋 Quiero el PACK PREVIA (ron o vodka + gaseosa 3L + hielo + vasos). ¿Precio y disponibilidad?" target="_blank" rel="noopener">Quiero este pack</a>
       </div>
       <div class="pack hot reveal">
         <span class="ribbon">★ El más pedido</span>
@@ -660,7 +686,7 @@ footer{border-top:1px solid var(--line);padding:60px 0 120px;background:#080604}
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5 9-10"/></svg>2 Baccarat 2L</li>
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5 9-10"/></svg>Gaseosas, hielo y vasos</li>
         </ul>
-        <a class="btn btn-gold" data-wa="Hola Licores San Miguel 👋 Quiero el PACK FIESTA (2 rones + 1 vodka + caja de cerveza + 2 Baccarat + gaseosas, hielo y vasos). ¿Precio y disponibilidad?" target="_blank" rel="noopener">Quiero este pack</a>
+        <a class="btn btn-gold" data-wa="Hola Licores El Chalo 👋 Quiero el PACK FIESTA (2 rones + 1 vodka + caja de cerveza + 2 Baccarat + gaseosas, hielo y vasos). ¿Precio y disponibilidad?" target="_blank" rel="noopener">Quiero este pack</a>
       </div>
       <div class="pack reveal">
         <h3>Pack Brindis</h3>
@@ -671,7 +697,7 @@ footer{border-top:1px solid var(--line);padding:60px 0 120px;background:#080604}
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5 9-10"/></svg>Bolsa de hielo</li>
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5 9-10"/></svg>Ideal para regalar</li>
         </ul>
-        <a class="btn btn-ghost" data-wa="Hola Licores San Miguel 👋 Quiero el PACK BRINDIS (3 espumantes Noche de Paz + 2 Vinos Borgoña + hielo). ¿Precio y disponibilidad?" target="_blank" rel="noopener">Quiero este pack</a>
+        <a class="btn btn-ghost" data-wa="Hola Licores El Chalo 👋 Quiero el PACK BRINDIS (3 espumantes Noche de Paz + 2 Vinos Borgoña + hielo). ¿Precio y disponibilidad?" target="_blank" rel="noopener">Quiero este pack</a>
       </div>
     </div>
   </div>
@@ -693,8 +719,8 @@ footer{border-top:1px solid var(--line);padding:60px 0 120px;background:#080604}
           <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><use href="#i-shield"/></svg>Productos originales</div>
         </div>
         <div class="cta">
-          <a class="btn btn-gold" data-wa="Hola Licores San Miguel 👋 Tengo un negocio y quiero la lista de PRECIOS POR MAYOR / preventa navideña." target="_blank" rel="noopener">Solicitar precios por mayor</a>
-          <a class="btn btn-wa" data-wa="Hola Licores San Miguel 👋 Quiero separar espumantes Noche de Paz en preventa navideña." target="_blank" rel="noopener"><svg viewBox="0 0 32 32" fill="currentColor"><use href="#i-wa"/></svg>Separar en preventa</a>
+          <a class="btn btn-gold" data-wa="Hola Licores El Chalo 👋 Tengo un negocio y quiero la lista de PRECIOS POR MAYOR / preventa navideña." target="_blank" rel="noopener">Solicitar precios por mayor</a>
+          <a class="btn btn-wa" data-wa="Hola Licores El Chalo 👋 Quiero separar espumantes Noche de Paz en preventa navideña." target="_blank" rel="noopener"><svg viewBox="0 0 32 32" fill="currentColor"><use href="#i-wa"/></svg>Separar en preventa</a>
         </div>
       </div>
     </div>
@@ -723,7 +749,7 @@ footer{border-top:1px solid var(--line);padding:60px 0 120px;background:#080604}
     </div>
     <div class="loc">
       <div class="loc-info reveal">
-        <h3>Licores <span class="gold-text">San Miguel</span></h3>
+        <div class="loc-brand"><img src="img/logo-web.png" alt="" width="76" height="76"><h3>Licores <span class="gold-text">El Chalo</span></h3></div>
         <div class="loc-row">
           <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><use href="#i-pin"/></svg></span>
           <div><b>Av. Belaúnde Oeste 200</b><span>Comas, Lima · muy cerca al cruce con la Av. Túpac Amaru</span></div>
@@ -738,7 +764,7 @@ footer{border-top:1px solid var(--line);padding:60px 0 120px;background:#080604}
         </div>
         <div class="cta">
           <a class="btn btn-gold" href="https://www.google.com/maps/search/?api=1&query=Av.+Bela%C3%BAnde+Oeste+200,+Comas,+Lima,+Per%C3%BA" target="_blank" rel="noopener">Cómo llegar</a>
-          <a class="btn btn-wa" data-wa="Hola Licores San Miguel 👋 ¿Llegan con delivery a mi zona? Estoy en: " target="_blank" rel="noopener"><svg viewBox="0 0 32 32" fill="currentColor"><use href="#i-wa"/></svg>¿Llegan a mi zona?</a>
+          <a class="btn btn-wa" data-wa="Hola Licores El Chalo 👋 ¿Llegan con delivery a mi zona? Estoy en: " target="_blank" rel="noopener"><svg viewBox="0 0 32 32" fill="currentColor"><use href="#i-wa"/></svg>¿Llegan a mi zona?</a>
         </div>
       </div>
       <div class="map reveal">
@@ -768,13 +794,14 @@ footer{border-top:1px solid var(--line);padding:60px 0 120px;background:#080604}
 <!-- FINAL CTA -->
 <section class="final">
   <div class="wrap reveal">
+    <div class="brand-badge final-badge"><img src="img/logo-web.png" alt="Licores El Chalo"></div>
     <span class="eyebrow">¿Se acabó el trago?</span>
     <h2>Que la fiesta <span class="gold-text">no pare</span>.<br>Nosotros llegamos.</h2>
     <p>Escríbenos ahora y recibe tus licores favoritos, bien helados, donde estés.</p>
-    <a class="btn btn-wa" style="padding:20px 36px;font-size:1.05rem" data-wa="Hola Licores San Miguel 👋 Quiero hacer un pedido por delivery." target="_blank" rel="noopener">
+    <a class="btn btn-wa" style="padding:20px 36px;font-size:1.05rem" data-wa="Hola Licores El Chalo 👋 Quiero hacer un pedido por delivery." target="_blank" rel="noopener">
       <svg viewBox="0 0 32 32" fill="currentColor"><use href="#i-wa"/></svg> Pedir por WhatsApp
     </a>
-    <a class="phone gold-text" data-wa="Hola Licores San Miguel 👋" target="_blank" rel="noopener">+51 977 829 907</a>
+    <a class="phone gold-text" data-wa="Hola Licores El Chalo 👋" target="_blank" rel="noopener">+51 977 829 907</a>
   </div>
 </section>
 </main>
@@ -783,7 +810,7 @@ footer{border-top:1px solid var(--line);padding:60px 0 120px;background:#080604}
   <div class="wrap">
     <div class="foot">
       <div>
-        <a href="#inicio" class="logo"><small>Licores</small><b class="gold-text">San Miguel</b></a>
+        <a href="#inicio" class="logo logo-foot"><img src="img/logo-web.png" alt="Distribuidor Licores El Chalo" width="96" height="96"><span class="wm"><small>Distribuidor</small><b class="gold-text">Licores El Chalo</b></span></a>
         <p>Delivery de licores en Comas: vinos, espumantes, rones, vodkas, whiskys, cervezas, Mike's y más. Calidad y rapidez en cada pedido.</p>
       </div>
       <div>
@@ -793,7 +820,7 @@ footer{border-top:1px solid var(--line);padding:60px 0 120px;background:#080604}
       <div>
         <h4>Contacto</h4>
         <ul>
-          <li><a data-wa="Hola Licores San Miguel 👋" target="_blank" rel="noopener">WhatsApp: +51 977 829 907</a></li>
+          <li><a data-wa="Hola Licores El Chalo 👋" target="_blank" rel="noopener">WhatsApp: +51 977 829 907</a></li>
           <li>Av. Belaúnde Oeste 200, Comas</li>
           <li>Cerca al cruce con Av. Túpac Amaru</li>
           <li>Lima, Perú</li>
@@ -802,7 +829,7 @@ footer{border-top:1px solid var(--line);padding:60px 0 120px;background:#080604}
     </div>
     <div class="legal">
       <div class="warn"><b>+18</b>Tomar bebidas alcohólicas en exceso es dañino</div>
-      <div>Prohibida la venta de bebidas alcohólicas a menores de 18 años. © <span id="year"></span> Licores San Miguel.</div>
+      <div>Prohibida la venta de bebidas alcohólicas a menores de 18 años. © <span id="year"></span> Licores El Chalo.</div>
     </div>
   </div>
 </footer>
@@ -816,7 +843,7 @@ footer{border-top:1px solid var(--line);padding:60px 0 120px;background:#080604}
 <!-- Floating WhatsApp -->
 <div class="wa-float" id="waFloat">
   <span class="label">¿Pedimos algo helado? 🧊<small>Respondemos al toque por WhatsApp</small></span>
-  <a class="wa-btn" data-wa="Hola Licores San Miguel 👋 Quiero hacer un pedido por delivery." target="_blank" rel="noopener" aria-label="Escríbenos por WhatsApp al +51 977 829 907">
+  <a class="wa-btn" data-wa="Hola Licores El Chalo 👋 Quiero hacer un pedido por delivery." target="_blank" rel="noopener" aria-label="Escríbenos por WhatsApp al +51 977 829 907">
     <svg viewBox="0 0 32 32" fill="currentColor"><use href="#i-wa"/></svg>
     <span class="badge">1</span>
   </a>
@@ -825,7 +852,7 @@ footer{border-top:1px solid var(--line);padding:60px 0 120px;background:#080604}
 <!-- Cart drawer -->
 <div class="overlay" id="overlay"></div>
 <aside class="drawer" id="drawer" aria-label="Mi pedido">
-  <div class="drawer-head"><h3>Mi pedido</h3><button id="closeCart" aria-label="Cerrar">×</button></div>
+  <div class="drawer-head"><div class="dh-title"><img src="img/logo-web.png" alt="" width="44" height="44"><h3>Mi pedido</h3></div><button id="closeCart" aria-label="Cerrar">×</button></div>
   <div class="drawer-body">
     <div class="items" id="items"></div>
     <div class="empty" id="empty">
@@ -904,7 +931,7 @@ footer{border-top:1px solid var(--line);padding:60px 0 120px;background:#080604}
   // Per-product "Pedir ya" links
   const updateProductLinks = card => {
     card.querySelectorAll('[data-wa-product]').forEach(a =>
-      a.href = waLink('Hola Licores San Miguel 👋 Quiero pedir delivery de: ' + productName(card) + '. ¿Precio y disponibilidad?'));
+      a.href = waLink('Hola Licores El Chalo 👋 Quiero pedir delivery de: ' + productName(card) + '. ¿Precio y disponibilidad?'));
   };
   $$('[data-product]').forEach(updateProductLinks);
 
@@ -957,7 +984,7 @@ footer{border-top:1px solid var(--line);padding:60px 0 120px;background:#080604}
   document.addEventListener('keydown', e => { if (e.key === 'Escape') closeCart(); });
 
   $('#sendOrder').addEventListener('click', e => {
-    const lines = ['Hola Licores San Miguel 👋 Quiero hacer este pedido por delivery:', ''];
+    const lines = ['Hola Licores El Chalo 👋 Quiero hacer este pedido por delivery:', ''];
     if (cart.size) cart.forEach((q, n) => lines.push('• ' + q + ' x ' + n));
     else lines.push('• (Quiero que me ayuden a armar mi pedido)');
     const v = id => document.getElementById(id).value.trim();
